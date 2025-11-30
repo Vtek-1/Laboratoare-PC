@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+float x1,x2,px,a,b,c;
+float x,F;
+int n;
+
+printf("Imput x1: ");
+scanf("%f", &x1);
+printf("Imput x2: ");
+scanf("%f", &x2 );
+printf("Imput px: ");
+scanf("%f", &px);
+printf("Imput a: ");
+scanf("%f", &a);
+printf("Imput b: ");
+scanf("%f", &b);
+printf("Imput c: ");
+scanf("%f", &c);
+x = x1;
+n = 0;
+if (x>x2)
+{
+    printf("\n x1>x2. Condition false");
+}
+else
+{
+while (x < x2)
+{
+printf("\n\t Results: \n");
+n = n + 1;
+if(((x + a) < 0) && (c == 0))
+{
+        F = (c/(a*x))-b;
+}
+    else if ((x+a>0) && (c!=0))
+    {
+            F = (x-a)/(c*sin(x));
+    }
+        else
+        {
+                F = (10*x)/(c-6);
+        }
+printf("%i:x=%.3f \t F=%.3f \n", n,x,F);
+x = x + px;
+}
+}
+    return 0;
+}
